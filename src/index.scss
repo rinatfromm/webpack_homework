@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 1rem auto;
+}
+
+.titleWeather {
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: rgb(224, 105, 31);
+}
+
+.mainContainer{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  gap: 50px;
+
+  .imgWeather{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}
+
+
+
