@@ -11,7 +11,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 1rem auto;
+  margin: 0; 
+  height: 100vh; 
+  background: linear-gradient(135deg, #FFCC00, #FF9966);
+  background-size: cover; 
+  background-repeat: no-repeat; 
 }
 
 .titleWeather {
@@ -21,17 +25,33 @@ body {
   color: rgb(224, 105, 31);
 }
 
-.mainContainer{
+.mainContainer {
   display: flex;
-  margin-bottom: 20px;
   justify-content: center;
   gap: 50px;
+}
 
-  .imgWeather{
-    width: 200px;
-    height: 200px;
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+
+  .imgWeather {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; 
     object-fit: cover;
-    border-radius: 30px;
+  }
+
+  .iconOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    opacity: 0.8; 
   }
 }
 
