@@ -32,6 +32,17 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
+        test: /\.(mp3|wav)$/i, 
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "assets/sounds/[name].[hash].[ext]", 
+            },
+          },
+        ],
+      }, 
+      {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -64,3 +75,4 @@ module.exports = {
     ],
   },
 };
+
