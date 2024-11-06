@@ -1,4 +1,3 @@
-// data.js
 import rain from "./assets/rainy-bg.jpg";
 import summer from "./assets/summer-bg.jpg";
 import winter from "./assets/winter-bg.jpg";
