@@ -7,8 +7,10 @@ import sun from "./assets/icons/sun.svg";
 import rainSound from "./assets/sounds/rain.mp3";
 import summerSound from "./assets/sounds/summer.mp3";
 import winterSound from "./assets/sounds/winter.mp3";
+import WeatherItem from './types/WeatherItem'
 
-const data = [
+
+const data: WeatherItem[] = [
   {
     id: 1,
     title: "Rain",

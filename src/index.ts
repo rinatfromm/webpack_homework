@@ -1,8 +1,9 @@
 import data from "./data";
 import "./index.scss";
+import WeatherItem from './types/WeatherItem'
 
-const body = document.querySelector("body");
-const root = document.querySelector("#app");
+const body = document.querySelector("body")!;
+const root = document.querySelector("#app")!;
 
 const title = document.createElement("h1");
 title.innerText = "Weather sound";
@@ -12,9 +13,9 @@ root.append(title);
 const mainContainer = document.createElement("div");
 mainContainer.classList.add("mainContainer");
 
-let currentSound = null;
+let currentSound: HTMLAudioElement | null = null;
 
-function renderItem(item) {
+function renderItem(item: WeatherItem) {
   const div = document.createElement("div");
   const img = document.createElement("img");
   const icon = document.createElement("img");
@@ -39,7 +40,7 @@ function renderItem(item) {
   volumeSlider.step = "0.1";
 
   volumeSlider.addEventListener("input", (event) => {
-    sound.volume = event.target.value;
+    sound.volume = parseFloat((event.target as HTMLInputElement).value);
   });
 
   div.addEventListener("click", (event) => {
@@ -63,6 +64,7 @@ function renderItem(item) {
       currentSound = sound;
       sound.play();
     }
+
     console.log(`Clicked on: ${item.title}`);
   });
 
